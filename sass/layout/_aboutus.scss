@@ -1,0 +1,50 @@
+.aboutus-list {
+	display: flex;
+	list-style: none;
+	padding-top: 94px;
+	padding-bottom: 47px;
+}
+
+.aboutus-list-item {
+	align-items: center;
+	width: 270px;
+	justify-content: center;
+
+	&:not(:last-child) {
+		margin-right: 30px;
+	}
+}
+.aboutus-list-item-fon {
+	background: #f5f4fa;
+	border-radius: 4px;
+	width: 270px;
+	height: 120px;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	& .svg {
+		align-items: center;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: auto;
+	}
+}
+.aboutus-title {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.14;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	color: $primary-text-color;
+}
+.aboutus-text {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 1.7;
+	color: $text-color;
+}
