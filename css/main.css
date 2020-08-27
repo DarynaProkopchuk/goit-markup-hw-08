@@ -1,9 +1,26 @@
 .container {
   padding-left: 15px;
   padding-right: 15px;
-  width: 1200px;
-  margin-left: auto;
+  margin-left: 0 auto;
   margin-right: auto;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 758px) {
+  .container {
+    width: 758px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .container {
+    width: 1600px;
+  }
 }
 
 html {
@@ -66,7 +83,7 @@ h2,
 h3,
 h4 {
   font-weight: 700;
-  color: var(--title-main-color);
+  color: #000000;
 }
 
 .address-nav-telefon-svg, .address-nav-mailto-svg {
@@ -113,7 +130,7 @@ h4 {
 .modal-form-title {
   margin-bottom: 30px;
   font-family: "Roboto", sans-serif;
-  font-style: 400;
+  font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 23px;
@@ -367,30 +384,17 @@ h4 {
   color: #2196f3;
 }
 
-.header.container {
+.header {
+  position: absolute;
+  padding-top: 16px;
+  padding-left: 16px;
+  /* &.container */
   display: flex;
-}
-
-.site-nav-list-link {
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
-.address-nav-list-item:not(:last-child) {
-  margin-right: 30px;
-}
-
-.adress {
-  margin-left: auto;
-}
-
-.navigation {
-  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
 .site-nav-list {
-  display: flex;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -402,10 +406,9 @@ h4 {
 
 .site-nav-list-item {
   position: relative;
-}
-
-.site-nav-list-item:not(:last-child) {
-  margin-right: 55px;
+  /*&:not(:last-child) {
+    margin-right: 55px;
+  }*/
 }
 
 .site-nav-list-link {
@@ -417,8 +420,56 @@ h4 {
   color: #2196f3;
 }
 
-.address-nav-list {
+.address-nav-telefon-svg {
+  width: 10px;
+  height: 15px;
+}
+
+.address-nav-mailto-svg {
+  width: 16px;
+  height: 11px;
+}
+
+.current {
+  color: #2196f3;
+}
+
+@media screen and (min-width: 480px) {
+  width: 480px;
+}
+
+@media screen and (min-width: 758px) {
+  width: 758px;
+}
+
+@media screen and (min-width: 1600px) {
+  width: 1600px;
+  .site-nav-list-item:not(:last-child) {
+    margin-right: 55px;
+  }
+  .site-nav-list-link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+/*
+
+
+.address-nav-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+.adress {
+  margin-left: auto;
+}
+.navigation {
   display: flex;
+  align-items: center;
+}*/
+/*.site-nav-list {
+  display: flex;}*/
+.address-nav-list {
+  /*display: flex;*/
   text-decoration: none;
   align-items: baseline;
   list-style: none;
@@ -456,18 +507,51 @@ h4 {
   fill: #2196f3;
 }
 
-.address-nav-telefon-svg {
-  width: 10px;
-  height: 15px;
+.menu-wrapper {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 453px;
+  background: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+  background-color: aqua;
 }
 
-.address-nav-mailto-svg {
-  width: 16px;
-  height: 11px;
+.menu-wrapper is-open {
+  display: block;
 }
 
-.current {
-  color: #2196f3;
+.menu-btn {
+  background-color: transparent;
+  border: none;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+  width: 40px;
+  height: 40px;
+}
+
+.icon-burger {
+  width: 24px;
+  height: 16px;
+}
+
+.icon-close {
+  display: none;
+  width: 18px;
+  height: 18px;
+}
+
+@media screen and (min-width: 758px) {
+  width: 758px;
+}
+
+@media screen and (min-width: 1600px) {
+  .menu-wrapper {
+    display: none;
+  }
 }
 
 .hero {
@@ -507,6 +591,24 @@ h4 {
   color: #ffffff;
   border: 0;
   padding: 10px 32px;
+}
+
+@media screen and (min-width: 480px) {
+  .hero {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 758px) {
+  .hero {
+    width: 758px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .hero {
+    width: 1600px;
+  }
 }
 
 .whatwedo-list {
@@ -767,7 +869,7 @@ h4 {
 
 .footer {
   background-color: #2f303a;
-  color: var(--light-text-color);
+  color: #ffffff;
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -914,13 +1016,6 @@ h4 {
 
 .social-links:focus, .social-links:hover {
   background-color: #2196f3;
-}
-
-.filter {
-  font-size: "Roboto", sans-serif;
-  text-decoration: none;
-  font-style: normal;
-  font-weight: 400;
 }
 
 .filter-list {
