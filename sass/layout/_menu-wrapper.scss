@@ -1,5 +1,4 @@
 .menu-wrapper {
-  display: none;
   position: absolute;
   top: 100%;
   left: 0;
@@ -8,23 +7,27 @@
   background: #ffffff;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
     0px 1px 3px rgba(0, 0, 0, 0.16);
-  background-color: aqua;
-  & is-open {
-    display: block;
+  transform: translateY(-100%);
+  transition: transform 500ms linear;
+  &.is-open {
+    transform: translateY(0);
   }
 }
 .menu-btn {
-  background-color: transparent;
-  border: none;
-  align-items: center;
   position: relative;
   z-index: 100;
-  width: 40px;
   height: 40px;
+  background-color: transparent;
+  border: none;
 }
-.icon-burger {
-  width: 24px;
-  height: 16px;
+.menu-btn.is-open .icon-close {
+  display: block;
+}
+.menu-btn.is-open .icon-burger {
+  display: none;
+}
+.icon-close {
+  display: none;
 }
 
 .icon-close {
@@ -32,10 +35,17 @@
   width: 18px;
   height: 18px;
 }
-
-@media screen and (min-width: 758px) {
-  width: 758px;
+.icon-burger {
+  width: 24px;
+  height: 16px;
 }
+/*TABLET*/
+@media screen and (min-width: 758px) {
+  .menu-wrapper {
+    width: 758px;
+  }
+}
+/*DESCTOP*/
 @media screen and (min-width: 1600px) {
   .menu-wrapper {
     display: none;
