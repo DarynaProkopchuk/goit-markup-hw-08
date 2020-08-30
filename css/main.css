@@ -94,10 +94,10 @@ h4 {
 
 .site-nav-list-item.portfolio::after, .site-nav-list-item.studio::after {
   position: absolute;
-  left: 0;
-  bottom: 0;
+  /* left: 0;
+  bottom: 0;*/
   display: block;
-  content: "";
+  content: '';
   width: 100%;
   height: 4px;
   background: #2196f3;
@@ -455,6 +455,29 @@ h4 {
 
 /*MOBILE*/
 @media screen and (min-width: 480px) {
+  .header {
+    width: 480px;
+    padding-left: 15px;
+    padding-top: 16px;
+  }
+  .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80px;
+    /*kak u sashi*/
+    position: relative;
+  }
+  .site-nav-list-link {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+    text-align: center;
+    display: inline-flex;
+  }
   .site-nav-list-item {
     margin-left: 191px;
     margin-top: 40px;
@@ -462,14 +485,14 @@ h4 {
   .site-nav-list {
     margin-top: 60px;
   }
-  .address-nav-list {
+  /*.address-nav-list {
     margin-left: 191px;
     margin-top: 60px;
     margin-bottom: 60px;
     /*&:not(:last-child) {
       padding-bottom: 16px;
-    }*/
-  }
+    }
+  }*/
   .address-nav-list-item:not(:last-child) {
     padding-bottom: 16px;
   }
@@ -487,6 +510,10 @@ h4 {
   .site-nav-list-link {
     padding-top: 32px;
     padding-bottom: 32px;
+  }
+  .navigation {
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -546,17 +573,17 @@ h4 {
 
 .menu-wrapper {
   position: absolute;
-  display: flex;
-  flex-direction: column;
+  align-items: center;
   top: 100%;
-  left: 0;
-  right: 0;
+  left: 50%;
+  right: 50%;
   width: 100%;
   height: 453px;
   background: #ffffff;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
-  transform: translateY(-100%);
+  transform: translateY(-150%);
   transition: transform 500ms linear;
+  /*flex-grow: 1; kak u sashi*/
 }
 
 .menu-wrapper.is-open {
@@ -569,9 +596,12 @@ h4 {
   padding: 0;
   z-index: 100;
   height: 40px;
+  width: 40px;
   display: inline-flex;
   background-color: transparent;
   border: none;
+  align-items: center;
+  padding: 10px;
 }
 
 .menu-btn.is-open .icon-close {
@@ -582,6 +612,14 @@ h4 {
   display: none;
 }
 
+.menu-btn:hover .icon-burger {
+  fill: #2196f3;
+}
+
+.menu-btn:hover .icon-closee {
+  fill: #2196f3;
+}
+
 .icon-close {
   display: none;
 }
@@ -590,17 +628,19 @@ h4 {
   display: none;
   width: 18px;
   height: 18px;
+  border: none;
 }
 
 .icon-burger {
   width: 24px;
   height: 16px;
+  border: none;
 }
 
 /*TABLET*/
 @media screen and (min-width: 758px) {
   .menu-wrapper {
-    width: 758px;
+    display: none;
   }
 }
 
@@ -653,6 +693,32 @@ h4 {
   width: 200px;
   height: 50px;
   /* margin-bottom: 118px;*/
+}
+
+@media screen and (max-width: 480px) {
+  .hero {
+    width: 480px;
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(/imeges/hero-mobile.jpg);
+  }
+}
+
+@media (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../imeges/hero-mobile2x.jpg);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero {
+    width: 480px;
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../imeges/hero-mobile.jpg);
+  }
+}
+
+@media (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../imeges/hero-mobile2x.jpg);
+  }
 }
 
 @media screen and (max-width: 480px) {

@@ -61,6 +61,28 @@
 }
 /*MOBILE*/
 @media screen and (min-width: 480px) {
+  .header {
+    width: 480px;
+    padding-left: 15px;
+    padding-top: 16px;
+  }
+  .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80px; /*kak u sashi*/
+    position: relative;
+  }
+  .site-nav-list-link {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+    text-align: center;
+    display: inline-flex;
+  }
   .site-nav-list-item {
     margin-left: 191px;
     margin-top: 40px;
@@ -68,14 +90,14 @@
   .site-nav-list {
     margin-top: 60px;
   }
-  .address-nav-list {
+  /*.address-nav-list {
     margin-left: 191px;
     margin-top: 60px;
     margin-bottom: 60px;
     /*&:not(:last-child) {
       padding-bottom: 16px;
-    }*/
-  }
+    }
+  }*/
   .address-nav-list-item:not(:last-child) {
     padding-bottom: 16px;
   }
@@ -92,6 +114,10 @@
   .site-nav-list-link {
     padding-top: 32px;
     padding-bottom: 32px;
+  }
+  .navigation {
+    display: flex;
+    align-items: center;
   }
 }
 
