@@ -27,9 +27,9 @@
 .site-nav-list-item {
   position: relative;
 
-  /*&:not(:last-child) {
+  &:not(:last-child) {
     margin-right: 55px;
-  }*/
+  }
   &.portfolio::after {
     @extend %font-after;
   }
@@ -70,8 +70,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 80px; /*kak u sashi*/
-    position: relative;
   }
   .site-nav-list-link {
     font-family: $main-font;
@@ -90,22 +88,23 @@
   .site-nav-list {
     margin-top: 60px;
   }
-  /*.address-nav-list {
+  .address-nav-list {
     margin-left: 191px;
     margin-top: 60px;
     margin-bottom: 60px;
-    /*&:not(:last-child) {
+    &:not(:last-child) {
       padding-bottom: 16px;
     }
-  }*/
+  }
   .address-nav-list-item:not(:last-child) {
     padding-bottom: 16px;
   }
 }
-/*TABLET*
-  @media screen and (min-width: 758px) {
-    width: 758px;
-  }*/
+/*TABLET*/
+@media screen and (min-width: 758px) {
+ .header
+ {width: 758px;}
+}
 /*DESCTOP*/
 @media screen and (min-width: 1200px) {
   .site-nav-list-item:not(:last-child) {
@@ -121,9 +120,6 @@
   }
 }
 
-/*
-
-
 .address-nav-list-item:not(:last-child) {
   margin-right: 30px;
 }
@@ -133,11 +129,12 @@
 .navigation {
   display: flex;
   align-items: center;
-}*/
-/*.site-nav-list {
-  display: flex;}*/
+}
+.site-nav-list {
+  display: flex;
+}
 .address-nav-list {
-  /*display: flex;*/
+  display: flex;
   text-decoration: none;
   align-items: baseline;
   list-style: none;
